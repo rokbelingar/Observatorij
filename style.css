@@ -1,0 +1,301 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+    color: whitesmoke;
+    z-index: 2;
+}
+
+.container{
+    overflow-y: scroll;
+}
+
+li, a, button{
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    background-color: #24252A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.stars{
+    position: absolute;
+    z-index: -1;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: 12%;
+    margin-top: -17px;
+}
+
+
+
+.nav_links .show-desktop{
+    list-style: none;
+    margin-left: 40px;
+    margin-right: 210px;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: rgb(245, 5, 79);
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgb(245, 5, 79, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}
+
+button:hover{
+    background-color: rgb(245, 5, 79, 0.8);
+}
+
+
+
+.greet{
+    margin: 0 auto;
+    text-align: center;
+    padding: 8% 12% 60px;
+    text-align: left;
+}
+
+.greet h1{
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 300;
+    font-size: 80px;
+    letter-spacing: 10px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.greet ul{
+    padding-right: 12%;
+}
+
+.greet p {
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
+}
+
+.signup_container h1{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 2em;    
+}
+
+
+.buttons_sign{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0;
+    font-size: 4em;
+}
+
+#search-job{
+    padding: 20px 30px;
+    background-color: rgb(245, 5, 79,);
+    font-size: 20px;
+}
+
+#search-job:hover{
+    background-color: rgb(201, 6, 64);
+}
+
+#supply-job{
+    padding: 20px 30px;
+    background-color: rgb(165, 165, 165);
+    font-size: 20px;
+}
+
+#supply-job:hover{
+    background-color: rgb(128, 128, 128);
+    font-size: 20px;
+}
+
+.about{
+    background-color: #24252A;
+    color: #edf0f1;
+    margin-top: 5%;
+    border-top-right-radius: 40px;
+    transform: skewY(2deg);
+}
+
+.about::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #24252A;
+    position: absolute;
+    top: -39px;
+    z-index: -2;
+}
+
+.about::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    top: -80px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+.onas_zgoraj,.onas_spodaj p {
+    font-size: 1.5em;
+}
+.about h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    transform: skewY(-2deg);
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.onas_zgoraj{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 12%;
+    text-align: left;
+    padding-top: 0.5em;
+    transform: skewY(-2deg);
+}
+
+.onas_spodaj{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 12%;
+    text-align: left;
+    padding-top: 0.5em;
+    transform: skewY(-2deg);
+}
+
+.onas_spodaj p {
+    margin-left: 80px;
+}
+
+.onas_zgoraj p {
+    margin-right: 60px;
+}
+
+.nabor{
+    padding: 30px;
+}
+.nabor h2{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.references {
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer{
+    background-color: #B5B5B5;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+
+.daddy{
+    font-weight: 100;
+    color: #CCCCCC;
+    text-align: center;
+
+}
+
+.socials{
+    text-align: right;
+}
+
+.socials img{
+    padding-right: 2em;
+}
+
+.socials img:hover{
+    cursor: pointer;
+}
+
+.privacy{
+    padding: 1em 1em;
+}
+.privacy a{
+    color: black;
+    padding: 1em;
+}
+
+.privacy a:hover{
+    color: white;
+}
+
+@media all and (max-width: 650px) {
+    body{
+        background-color: wheat;
+    }
+}
+form{
+    display: grid;
+}
+
+input{
+    margin: 10px;
+    padding: 10px;
+}
+
+.signup_form{
+    height: 80vh;
+    padding: 10% 12% 10%;
+}
+
+#form{
+    background-color: #24252A;
+    padding: 2% 35%;
+    margin-top: 40px;
+}
+
+
+#form button{
+    margin-left: 0;
+    margin-top: 7%;
+}
