@@ -38,6 +38,14 @@
         }
     }
     ?>
+        <div class="nav_links">
+                    <div id="registracija_link">
+                        <li>
+                           <p>Že imate profil?  <a href="login.php"> Prijava</a></p>
+                        </li>
+                    </div>
+                </div>
+        </div>
     </div>
 </section>
 

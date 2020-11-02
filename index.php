@@ -27,8 +27,8 @@
         <div class="signup_container">
                 <h1>PRIDRUŽI SE PLATFORMI:</h1>
             <div class="buttons_sign">
-                <a href="signup.php"><button id="search-job">IŠČEM DELO</button></a>
-                <a href="signup_company.php"><button id="supply-job">NUDIM DELO</button></a>
+                <a href="signup.php"><button id="search-job">REGISTRACIJA</button></a>
+                <a href="signup_company.php"><button id="supply-job">ZA PODJETJA</button></a>
             </div>
         </div>
     </section>
