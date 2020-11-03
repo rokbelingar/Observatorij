@@ -17,6 +17,6 @@ if (isset($_POST["submit"])) {
 
 }
 else{
-    header("location: ../login.php");
+    header("location: ../profiles.php");
     exit();
 }

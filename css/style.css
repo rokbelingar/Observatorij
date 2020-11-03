@@ -7,6 +7,7 @@ body{
     background-color: black;
     color: whitesmoke;
     z-index: 2;
+    height: 100vh;
 }
 
 .container{
@@ -306,10 +307,20 @@ input{
     justify-content: space-between;
 }
 
-#prijava_link p{
-    padding: 10px 20px;
-}
-
 #registracija_link{
     padding-top: 30px;
+}
+
+.profiles{
+    position: absolute;
+    top: 50%;
+}
+
+main{
+    height: 100vh;
+}
+
+.my_profile{
+    position: absolute;
+    top: 50%;
 }

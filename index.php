@@ -12,11 +12,6 @@
     </div>
         <div class="greet">
             <div>
-            <?php
-                if (isset($_SESSION["useruid"])) {
-                     echo "<p>Živjo " . $_SESSION["useruid"] . "</p>";
-                    }
-                ?>
             <h1>DOBRODOŠLI V OBSERVATORIJU!</h1>
             <p>Spletno štičišče študentov in podjetij, 
                 kjer zgolj s prijavo v portal kandidirate 
