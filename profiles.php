@@ -11,9 +11,9 @@
     <section>
     <div class="grid">
     <div class="grid_input">
-    <form action="search.php" method="POST">
+    <form action="search.php" method="POST" id="po_imenu">
         <input id="search" name="search" type="text" placeholder="Išči po imenu...">
-        <input id="submit" type="submit" value="Search" name="submit-search">
+        <a href="signup.php"><button id="išči_ime" name='submit-search'>IŠČI</button></a>
         </form>
     </div>
             <div class = "en_profil">
@@ -31,10 +31,13 @@
 
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '<a href="#">
-                    <div>
-                    <div class = "profil">
+                    <div class="thecard">
+                    <div class = "thefront">
                     <h3>'.$row["usersName"].'</h3>
                     <p>'.$row["usersEmail"].'</p>
+                    </div>
+                    <div class="theback">
+                    <p>ROK</p>
                     </div>
                     </div>
                     </a>';
@@ -48,7 +51,7 @@
     </div>
     </section>
 
-        
+
     </body>
     </html>
 

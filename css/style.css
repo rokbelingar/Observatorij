@@ -1,3 +1,11 @@
+
+:root {
+    --primary: #FFCE00;
+    --secondary: #FE4880;
+    --dark: #212121;
+    --light: #F3F3F3;
+  }
+
 body{
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
@@ -341,7 +349,7 @@ input{
 
 .en_profil a {
     width: 230px;
-    margin: 20px 10px 0;
+    margin: 20px 10px 20px 20px;
 }
 
 .en_profil a:hover {
@@ -350,7 +358,7 @@ input{
 
 .en_profil a div{
     width: 100%;
-    height: 235px;
+    height: 335px;
     background-color: #B5B5B5;
     background-position: center;
     background-repeat: no-repeat;
@@ -358,9 +366,70 @@ input{
     border-radius: 20px;
 }
 
-.profil{
+.thefront{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+}
+
+.theback{
     display: grid;
     justify-content: center;
     align-content: center;
     text-align: center;
 }
+
+#po_imenu{
+    display: flex;
+    align-items: center;
+    margin: 10%;
+}
+
+
+#išči_ime{
+    padding: 9px 25px;
+    margin-left: 0;
+}
+
+.thecard{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+  }
+
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.theback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: rotateY(180deg);
+}
+
+
