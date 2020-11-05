@@ -4,13 +4,15 @@ if (isset($_POST["submit"])){
 
     $name = $_POST["name"];
     $email = $_POST["email"];
+    $hometown = $_POST["hometown"];
+    $age = $_POST["age"];
     $pwd = $_POST["pwd"];
     $pwdRepeat = $_POST["pwdrepeat"];
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if (emptyInputSignup($name, $email, $pwd, $pwdRepeat) !== false) {
+    if (emptyInputSignup($name, $email, $hometown, $pwd, $pwdRepeat) !== false) {
         header("location: ../signup.php?error=emptyinput");
         exit();
     }
@@ -28,7 +30,7 @@ if (isset($_POST["submit"])){
         exit();
     }
     
-    createUser($conn, $name, $email, $pwd);
+    createUser($conn, $name, $email, $hometown, $age, $pwd);
 }
 
 

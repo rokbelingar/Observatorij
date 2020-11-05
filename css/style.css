@@ -385,6 +385,7 @@ input{
     display: flex;
     align-items: center;
     margin: 10%;
+    margin-bottom: 5%;
 }
 
 
@@ -432,4 +433,11 @@ input{
     transform: rotateY(180deg);
 }
 
+#nazaj{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 18%;
+}
 

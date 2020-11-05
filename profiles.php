@@ -16,12 +16,12 @@
         <a href="signup.php"><button id="išči_ime" name='submit-search'>IŠČI</button></a>
         </form>
     </div>
-            <div class = "en_profil">
+    <div class = "en_profil">
         <?php  
          
          include_once 'includes/dbh.inc.php';
 
-        $sql = "SELECT usersName, usersEmail FROM users";
+        $sql = "SELECT usersName, usersEmail, hometown, age FROM users";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             echo "SQL statement failed!";
@@ -34,10 +34,11 @@
                     <div class="thecard">
                     <div class = "thefront">
                     <h3>'.$row["usersName"].'</h3>
-                    <p>'.$row["usersEmail"].'</p>
+                    <p>'.$row["hometown"].'</p>
                     </div>
                     <div class="theback">
-                    <p>ROK</p>
+                    <p>Email: '.$row["usersEmail"].'</p>
+                    <p>Starost: '.$row["age"].' Let</p>
                     </div>
                     </div>
                     </a>';

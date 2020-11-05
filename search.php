@@ -48,13 +48,14 @@
                             </a>';
                         }
                     } else{
-                        echo "Ni zadetkov...";
+                        echo "Ni zadetkov...";      
                     }
                 }
 
                 ?>
                 </div>
                 </div>
+                <a href="profiles.php" id="nazaj">NAZAJ</a>
             </div>
             </section>
         

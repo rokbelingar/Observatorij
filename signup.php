@@ -8,6 +8,8 @@
     <form action="includes/signup.inc.php" method="post">
         <input type="text" name="name" placeholder="Ime in priimek...">
         <input type="text" name="email" placeholder="Email...">
+        <input type="text" name="hometown" placeholder="Mesto...">
+        <input type="number" name="age" placeholder="Starost..." min = "16" max= "65">
         <input type="password" name="pwd" placeholder="Geslo...">
         <input type="password" name="pwdrepeat" placeholder="Ponovi geslo...">
         <button type="submit" name="submit">Nadaljuj</button>
