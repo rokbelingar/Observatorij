@@ -60,8 +60,8 @@ function  uidExists($conn, $name, $email){
     mysqli_stmt_close($stmt);
 }
 
-function  createUser($conn, $name, $email, $hometown, $age, $pwd) {
-    $sql = "INSERT INTO users (usersName, usersEmail, hometown, age, usersPwd) VALUES(?, ?, ?, ?, ?);";
+function  createUser($conn, $name, $email, $hometown, $age, $from_date, $to_date, $pwd) {
+    $sql = "INSERT INTO users (usersName, usersEmail, hometown, age, from_date, to_date, usersPwd) VALUES(?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)){
         header("location: ../signup.php?error=stmtfailed");
@@ -70,7 +70,7 @@ function  createUser($conn, $name, $email, $hometown, $age, $pwd) {
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "sssis", $name, $email, $hometown, $age, $hashedPwd);
+    mysqli_stmt_bind_param($stmt, "sssisss", $name, $email, $hometown, $age, $from_date, $to_date, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../signup.php?error=none");

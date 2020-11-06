@@ -10,6 +10,8 @@
         <input type="text" name="email" placeholder="Email...">
         <input type="text" name="hometown" placeholder="Mesto...">
         <input type="number" name="age" placeholder="Starost..." min = "16" max= "65">
+        <input type="date" name="from_date" placeholder="Datum začetka..." id="from_date">
+        <input type="date" name="to_date" placeholder="datum zaključka..." id="to_date">
         <input type="password" name="pwd" placeholder="Geslo...">
         <input type="password" name="pwdrepeat" placeholder="Ponovi geslo...">
         <button type="submit" name="submit">Nadaljuj</button>

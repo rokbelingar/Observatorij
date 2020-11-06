@@ -379,6 +379,7 @@ input{
     justify-content: center;
     align-content: center;
     text-align: center;
+    background-color: #B5B5BB;
 }
 
 #po_imenu{
@@ -392,6 +393,7 @@ input{
 #išči_ime{
     padding: 9px 25px;
     margin-left: 0;
+    background-color: #B5B5BB;
 }
 
 .thecard{
@@ -431,6 +433,7 @@ input{
     backface-visibility: hidden;
     overflow: hidden;
     transform: rotateY(180deg);
+    color: black;
 }
 
 #nazaj{
@@ -441,3 +444,6 @@ input{
     padding-bottom: 18%;
 }
 
+.profile_container{
+    display: flex;
+}
