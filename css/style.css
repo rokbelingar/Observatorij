@@ -289,7 +289,6 @@ input{
 }
 
 .signup_form{
-    height: 80vh;
     padding: 10% 12% 10%;
 }
 
@@ -317,8 +316,9 @@ input{
 
 
 .grid{
-    padding: 5% 15% 10% 15%;
+    padding: 5% 5% 10% 5%;
     height: 100%;
+    margin: 0 auto;
 }
 
 .grid input{
@@ -375,7 +375,6 @@ input{
 }
 
 .theback{
-    display: grid;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -384,10 +383,20 @@ input{
 
 #po_imenu{
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 10%;
+    margin-top: 10%;
     margin-bottom: 5%;
 }
+
+#po_imenu button{
+    background-color: #B5B5BB;
+}
+#po_imenu button:hover{
+    background-color: #a7a7a7;
+}
+
+
 
 
 #išči_ime{
@@ -436,14 +445,70 @@ input{
     color: black;
 }
 
+.theback a{
+    padding:0;
+}
+
 #nazaj{
     font-size: 1.2em;
     display: flex;
     justify-content: center;
-    padding-top: 0;
+    padding-top: 20px;
     padding-bottom: 18%;
 }
 
 .profile_container{
     display: flex;
+    justify-content: flex-start;
 }
+
+.filters{
+    margin-top: 225px;
+    margin-left: 3%;
+
+}
+
+.filter-box{
+    background-color:  #24252A;
+    padding: 20px;
+}
+
+.filters input{
+    margin: 10%;
+}
+
+.filters button{
+    width: 80%;
+    margin-top: 7%;
+}
+
+/* #filtrirana_stran{
+
+} */
+
+.container_myprofile button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper_myprofile{
+    padding: 15%;
+    display: flex;
+    padding-bottom: 10%;
+    justify-content: space-between;
+}
+
+.window_myprofile{
+    background-color: #24252A;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+#ureditev_profila{
+    background-color: #979797;
+}
+
+#ureditev_profila:hover{
+    background-color: #7e7e7e;
+}
+

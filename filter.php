@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+    <body>
 <?php
     include_once 'header.php';
 ?>
@@ -6,28 +11,15 @@
                 include_once 'includes/dbh.inc.php';
 ?>
 
-<!DOCTYPE html>
-    <html>
-    <head>
-    </head>
-    <body>
         
     <section class="profile_container">
     <div class="grid">
-    <div class="grid_input">
+        <div class="grid_input">
         <form action="search.php" method="POST" id="po_imenu">
         <input id="search" name="search" type="text" placeholder="Išči po imenu...">
         <!-- <input id="submit" type="submit" value="Search" name="submit-search"> -->
         <!-- button -->
-        <a href="signup.php"><button id="po_imenu" name='submit-search'>IŠČI</button></a>
-        </form>
-        <form action="filter.php" method="POST">
-        <input type="text" name="hometown" placeholder="Mesto...">
-        <input type="number" name="age" placeholder="Starost..." min = "16" max= "65">
-        <input type="input" name="from_date" placeholder="Datum začetka..." id="from_date">
-        <input type="input" name="to_date" placeholder="datum zaključka..." id="to_date">
-        <a href="filter.php"><button name='filter'>IŠČI</button></a>
-        </form>
+        <a href="search.php"><button id="po_imenu" name='submit-search'>IŠČI</button></a>
     </div>
             <div class = "en_profil">
         
@@ -39,6 +31,7 @@
         if(isset($_POST['filter'])){
             $hometown = $_POST["hometown"];
             $age = $_POST["age"];
+            $ocena = $_POST["ocena"];
             $from_date = $_POST["from_date"];
             $fdate = strtotime($from_date);
             $fdate = date("Y/m/d", $fdate);
@@ -47,8 +40,8 @@
             $tdate = strtotime($to_date);
             $tdate = date("Y/m/d", $tdate);
 
-            if($hometown != "" || $age != "" || $fdate != "" || $tdate !=""){
-                $sql = "SELECT usersName, usersEmail, hometown, age, from_date, to_date FROM users WHERE hometown = '$hometown' OR age = '$age' OR from_date <= '$fdate' AND to_date >= '$tdate'";
+            if($hometown != '' || $age != '' || $ocena != "" || $fdate != "" || $tdate !=""){
+                $sql = "SELECT usersName, usersEmail, hometown, age, ocena, from_date, to_date FROM users WHERE hometown = '$hometown' OR age = '$age' OR ocena = '$ocena' OR from_date <= '$fdate' AND to_date >= '$tdate'";
                 $result = mysqli_query($conn, $sql) or die('error');
 
                 if(mysqli_num_rows($result) > 0){
@@ -66,6 +59,7 @@
                 <p>'.$row["hometown"].'</p>
                 <p>Email: '.$row["usersEmail"].'</p>
                 <p>Starost: '.$row["age"].' Let</p>
+                <p>Povprečje: '.$row["ocena"].'</p>
                 <p>Od: '.$row["from_date"].'</p>
                 <p>Do: '.$row["to_date"].'</p>
                 </div>
@@ -80,8 +74,9 @@
         ?>
                 
                 </div>
-                </div>
                 <a href="profiles.php" id="nazaj">NAZAJ</a> 
+                </div>
+
 
               
 
@@ -89,9 +84,8 @@
     </section>
 
 
-    </body>
-    </html>
-
 <?php
     include_once 'footer.php';
 ?>
+    </body>
+    </html>

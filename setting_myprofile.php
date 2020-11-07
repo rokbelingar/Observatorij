@@ -2,58 +2,20 @@
     include_once 'header.php';
 ?>
 
-<section class="setting_profile">
-    <!-- <div id="form"> -->
-    <h2>Moj profil:</h2>
-    <!-- <form action="includes/signup.inc.php" method="post"> -->
-    <div>
-        <label for="profile_pic">Profilna slika:</label>
-        <input type="file" id="profile_pic" name="profile_image">
-        <label for="name">Ime in priimek:</label>
-        <input type="text" name="name" id="name" placeholder="Ime in priimek...">
-        <label for="mesto">Mesto:</label>
-        <input type="text" id="mesto" name="hometown" placeholder="Mesto...">
-        <label for="birtday">Rojstni dan</label>
-        <input type="date" name="birthday" id="birthday">
-    </div>
-    <div>
-        <label for="uni">Fakulteta:</label>
-            <input type="text" name="uni" id="uni" placeholder="Fakulteta...">
-        <label for="povprecna_ocena">Povprečna ocena:</label>
-            <input type="number" id="povprecna_ocena" name="grade" min="5" max="10">
-       <label for="certificates">Dodatna znanja/certifikati:</label>
-            <input type="text" name="cetrtificates" placeholder="Dodatna znanja/Certifikati..." id="certificates">
-    </div>
-    <div>
-        <label for="languages">Tuji jeziki:</label>
-            <input type="text" name="languages" id="languages" placeholder="Tuji jeziki...">
-            <input type="radio" id="A2" name="level" value="A2">
-            <label for="A2">A2</label><br>
-            <input type="radio" id="A1" name="level" value="A1">
-            <label for="A1">A1</label><br>
-            <input type="radio" id="B2" name="level" value="B2">
-            <label for="B2">B2</label><br>
-            <input type="radio" id="B1" name="level" value="B1">
-            <label for="B1">B1</label><br>
-            <input type="radio" id="C2" name="level" value="C2">
-            <label for="C2">C2</label><br>
-            <input type="radio" id="C1" name="level" value="C1">
-            <label for="C1">C1</label><br>
-        </div>
-        <div>
-            <p>Vnesite od kdaj do kdaj bi želeli delati:</p>
-            <label for="datemax"></label>
-            <input type="date" id="datemax" name="datemax" max="today"><br><br>
-            <label for="datemin"></label>
-            <input type="date" id="datemin" name="datemin" min="01.01.2030">
-            <p>CV</p>
-            <input type="file" name="CV">
-        </div>
-        <div>
-            <input type="password" name="pwd" placeholder="Geslo...">
-            <input type="password" name="pwdrepeat" placeholder="Ponovi geslo...">
-        </div>
-        <button type="submit" name="shrani" href="myprofile.php">Shrani</button>
+<section class="signup_form">
+    <div id="form">
+    <h2>Registracija:</h2>
+    <form action="includes/signup.inc.php" method="post" >
+        <input type="text" name="name" placeholder="Ime in priimek...">
+        <input type="text" name="email" placeholder="Email...">
+        <input type="text" name="hometown" placeholder="Mesto...">
+        <input type="number" name="age" placeholder="Starost..." min = "16" max= "65">
+        <input type="number" name="ocena" placeholder="Povprečna ocena..." min = "6" max= "10" step=".01">
+        <input type="date" name="from_date" placeholder="Datum začetka..." id="from_date">
+        <input type="date" name="to_date" placeholder="datum zaključka..." id="to_date">
+        <input type="password" name="pwd" placeholder="Geslo...">
+        <input type="password" name="pwdrepeat" placeholder="Ponovi geslo...">
+        <button type="submit" name="submit">Nadaljuj</button>
     </form>
     <?php
     if(isset($_GET["error"])){
@@ -77,7 +39,7 @@
             echo "<p>Nekaj je narobe, poizkusite še enkrat!</p>";
         }
         else if ($_GET["error"] == "none"){
-            echo "<p>Spremembe shranjene!</p>";
+            echo "<p>Registrirani ste!</p>";
         }
     }
     ?>
@@ -88,3 +50,4 @@
 <?php
     include_once 'footer.php';
 ?>
+
