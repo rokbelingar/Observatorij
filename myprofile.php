@@ -7,6 +7,19 @@
 <?php
     include_once 'header.php';
     
+    if(isset($_GET['edit'])){
+        $userid = $_GET['edit'];
+
+        $rec = mysqli_query($conn, "SELECT * FROM users WHERE usersId = $userid") or die('error');
+        $record = mysqli_fetch_array($rec);
+        $name = $record["usersName"];
+        $email = $record["usersEmail"];
+        $hometown = $record["hometown"];
+        $age = $record["age"];
+        $ocena = $record["ocena"];
+        $fdate = $record["from_date"];
+        $tdate = $record["to_date"];
+    }
 ?>
 
         
@@ -15,6 +28,17 @@
 
         
         <?php
+
+// $name = "";
+// $email = "";
+// $hometown = "";
+// $age = "";
+// $ocena = "";
+// $fdate = "";
+// $tdate = "";
+// $userid = 0;
+
+// $edit_state = false;
             
             include_once 'includes/dbh.inc.php';
 
@@ -36,8 +60,8 @@
 
     ?>
     <div>
-            <a href="filter.php"><button name='filter' id="ureditev_profila" href="setting_myprofile.php">Uredi profil</button></a> <br><br><br>
-            <a href="filter.php" id="izbris_profila"><button name='filter'>Izbris profila</button></a>
+            <a href = "edit.php?id=<?php echo $row['usersId'] ?>"><button name='filter' id="ureditev_profila">Uredi profil</button></a> <br><br><br>
+            <a id="izbris_profila" href="delete_profile.php?id=<?php echo $row['usersId'] ?>"><button name='filter'>Izbris profila</button></a>
             </div>
         </div>
 
