@@ -1,0 +1,542 @@
+
+:root {
+    --primary: #FFCE00;
+    --secondary: #FE4880;
+    --dark: #212121;
+    --light: #F3F3F3;
+  }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+    color: whitesmoke;
+    z-index: 2;
+    height: 100vh;
+}
+
+.container{
+    overflow-y: scroll;
+}
+
+li, a, button{
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    background-color: #24252A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.stars{
+    position: absolute;
+    z-index: -1;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: 12%;
+    margin-top: -17px;
+}
+
+
+
+.nav_links .show-desktop{
+    list-style: none;
+    margin-left: 40px;
+    margin-right: 210px;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: rgb(245, 5, 79);
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgb(245, 5, 79, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}
+
+button:hover{
+    background-color: rgb(245, 5, 79, 0.8);
+}
+
+
+
+.greet{
+    margin: 0 auto;
+    text-align: center;
+    padding: 8% 12% 60px;
+    text-align: left;
+}
+
+.greet h1{
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 300;
+    font-size: 80px;
+    letter-spacing: 10px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.greet ul{
+    padding-right: 12%;
+}
+
+.greet p {
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
+}
+
+.signup_container h1{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 2em;    
+}
+
+
+.buttons_sign{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0;
+    font-size: 4em;
+}
+
+#search-job{
+    padding: 20px 30px;
+    background-color: rgb(245, 5, 79,);
+    font-size: 20px;
+}
+
+#search-job:hover{
+    background-color: rgb(201, 6, 64);
+}
+
+#supply-job{
+    padding: 20px 30px;
+    background-color: rgb(165, 165, 165);
+    font-size: 20px;
+}
+
+#supply-job:hover{
+    background-color: rgb(128, 128, 128);
+    font-size: 20px;
+}
+
+.about{
+    background-color: #24252A;
+    color: #edf0f1;
+    margin-top: 5%;
+    border-top-right-radius: 40px;
+    transform: skewY(2deg);
+}
+
+.about::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #24252A;
+    position: absolute;
+    top: -39px;
+    z-index: -2;
+}
+
+.about::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    top: -80px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+.onas_zgoraj,.onas_spodaj p {
+    font-size: 1.5em;
+}
+.about h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    transform: skewY(-2deg);
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.onas_zgoraj{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 12%;
+    text-align: left;
+    padding-top: 0.5em;
+    transform: skewY(-2deg);
+}
+
+.onas_spodaj{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 12%;
+    text-align: left;
+    padding-top: 0.5em;
+    transform: skewY(-2deg);
+}
+
+.onas_spodaj p {
+    margin-left: 80px;
+}
+
+.onas_zgoraj p {
+    margin-right: 60px;
+}
+
+.nabor{
+    padding: 30px;
+}
+.nabor h2{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.references {
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer{
+    background-color: #B5B5B5;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+
+.daddy{
+    font-weight: 100;
+    color: #CCCCCC;
+    text-align: center;
+
+}
+
+.socials{
+    text-align: right;
+}
+
+.socials img{
+    padding-right: 2em;
+}
+
+.socials img:hover{
+    cursor: pointer;
+}
+
+.privacy{
+    padding: 1em 1em;
+}
+.privacy a{
+    color: black;
+    padding: 1em;
+}
+
+.privacy a:hover{
+    color: white;
+}
+
+
+form{
+    display: grid;
+}
+
+input{
+    margin: 10px;
+    padding: 10px;
+}
+
+.signup_form{
+    padding: 10% 12% 10%;
+}
+
+#form{
+    background-color: #24252A;
+    padding: 2% 35%;
+    margin-top: 40px;
+}
+
+
+#form button{
+    margin-left: 0;
+    margin-top: 7%;
+}
+
+#prijava_link{
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#registracija_link{
+    padding-top: 30px;
+}
+
+
+.grid{
+    padding: 5% 5% 10% 5%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.grid input{
+    width: 60%;
+    border-radius: 8px;
+}
+
+.grid_input{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profiles{
+    width: 240px;
+}
+
+
+
+.en_profil{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: #24252A;
+}
+
+.en_profil a {
+    width: 230px;
+    margin: 20px 10px 20px 20px;
+}
+
+.en_profil a:hover {
+    opacity: 0.8;
+}
+
+.en_profil a div{
+    width: 100%;
+    height: 335px;
+    background-color: #B5B5B5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.thefront{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+}
+
+.theback{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: #B5B5BB;
+}
+
+#po_imenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+#po_imenu button{
+    background-color: #B5B5BB;
+}
+#po_imenu button:hover{
+    background-color: #a7a7a7;
+}
+
+
+
+
+#išči_ime{
+    padding: 9px 25px;
+    margin-left: 0;
+    background-color: #B5B5BB;
+}
+
+.thecard{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+  }
+
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.theback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: rotateY(180deg);
+    color: black;
+}
+
+.theback a{
+    padding:0;
+}
+
+#nazaj{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 18%;
+}
+
+.profile_container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filters{
+    margin-top: 225px;
+    margin-left: 3%;
+
+}
+
+.filter-box{
+    background-color:  #24252A;
+    padding: 20px;
+}
+
+.filters input{
+    margin: 10%;
+}
+
+.filters button{
+    width: 80%;
+    margin-top: 7%;
+}
+
+/* #filtrirana_stran{
+
+} */
+
+.container_myprofile button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper_myprofile{
+    padding: 15%;
+    display: flex;
+    padding-bottom: 10%;
+    justify-content: space-between;
+}
+
+.window_myprofile{
+    background-color: #24252A;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+#ureditev_profila{
+    background-color: #979797;
+}
+
+#ureditev_profila:hover{
+    background-color: #7e7e7e;
+}
+
+#shrani_spremembe{
+    background-color: rgb(3, 204, 87);
+}
+#shrani_spremembe:hover{
+    background-color: rgb(1, 172, 72);
+}
+
+#nazaj_edit{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+#nazaj_edit:hover{
+    color: rgb(245, 5, 79);
+}
+#nav_links{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+#nav_links li{
+    padding: 10px;
+    list-style: none;
+}
