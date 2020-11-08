@@ -21,7 +21,7 @@
         <input type="date" name="to_date" placeholder="datum zaključka..." id="to_date">
         <input type="password" name="pwd" placeholder="Geslo...">
         <input type="password" name="pwdrepeat" placeholder="Ponovi geslo...">
-        <button type="submit" name="submit">Nadaljuj</button>
+        <button type="submit" name="submit" href="login.php">Nadaljuj</button>
     </form>
     <?php
     if(isset($_GET["error"])){

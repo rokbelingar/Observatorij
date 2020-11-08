@@ -5,7 +5,7 @@
 <section class="signup_form">
     <div id="form">
     <h2>Registracija:</h2>
-    <form action="includes/signup.inc.php" method="post">
+    <form action="includes/signup_company.inc.php" method="post">
         <input type="text" name="name" placeholder="Ime podjetja...">
         <input type="text" name="email" placeholder="Email...">
         <input type="password" name="pwd" placeholder="Geslo...">

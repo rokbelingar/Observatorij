@@ -48,6 +48,7 @@
     <body>
 
 <section class="signup_form">
+<a href="profiles.php" id="nazaj_edit">NAZAJ</a> 
     <div id="form">
     <h2>Uredi:</h2>
     <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
@@ -64,6 +65,7 @@
         
     </form>
     </div>
+    <div>
     </div>
 </section>
 

@@ -12,10 +12,10 @@
     </div>
         <div class="greet">
             <div>
-            <h1>DOBRODOŠLI V OBSERVATORIJU!</h1>
-            <p>Spletno štičišče študentov in podjetij, 
-                kjer zgolj s prijavo v portal kandidirate 
-                za delovna mesta na vašem akademskem področju.</p>
+            <h1>DOBRODOŠLI V OBSERVATORIJ!</h1>
+            <p>Spletna platforma ti omogoča, da z registracijo kandidiraš za 
+                kratkoročna ali dolgoročna delovna mesta, znotraj tvojega razpoložljivega urnika. 
+</p>
             </div>
             <!-- <img src="./Slikovni-material/MAINPIC.png" alt="main-pic" class="main-pic"> -->
         </div>
@@ -33,15 +33,15 @@
             <h2>O NAS</h2>
             <div class="onas_zgoraj">
                 <div>
-                <p>Spletna platforma xy je namenjena dijakom, 
-                študentom in vsem mladim željanih dela. 
-                Platforma deluje na principu pristopa 
-                delodajalec - delojemalec torej obratno od 
-                navadnih spletnih portalov te vrste.</p>
+                <p>Kot študent sem se vedno soočal s težavo časovne razpoložljivosti dela. V kolikor sem šel na razgovor nisem nikoli želel odkrito govoriti, da sem delodajalcu na voljo zgolj “en mesec” saj bi to moje možnosti za to delovno mesto drastično zmanjšalo.
 
-                <p>Več informacij kot jih zaupaš platformi, boljšo
-                    sliko si bodo podjetja o tebi ustvarila in s tem
-                    imaš večjo verjetnost povabila na razgovore.</p>
+</p>
+
+                <p>Rešitev je Observatorij, spletno stičišče delodajalcev in mladih, 
+                    kjer mladi z objavo svojih informacij, izkušenj, izobrazbe, 
+                    povprečno oceno, razpoložjivosti za delo, 
+                    kandidirajo za različna delovna mesta.
+</p>
                 </div>
                 <img src="./Slikovni-material/ONAS_zgoraj.png" alt="Slikovni-material">
             </div>    
@@ -50,14 +50,13 @@
             <img src="./Slikovni-material/spodaj_ONAS.png" alt="Slikovni-material">
             <!-- </div> -->
             <div>
-            <p>Obogati svoj CV z izkušnjami, pri tem pa se posveti 
-                študiju in se prepusti xy, preko katere te bodo kontaktirali 
-                delodajalci.</p>
+            <p>Observatorij deluje po principu delodajalec-kandidat, 
+                    torej delodajalci naredijo izbor kandidatov glede na pogoje, ki jih določeno
+                    delovno mesto zahteva.</p>
 
-            <p>Slovenski in tuji delodajalci iščejo talentirane in 
-                perspektivne kadre kot si ti. Ne zamudi priložnosti in se prijavi, 
-                ter tako znanje, ki si ga pridobil izza šolskih klopi prenesi 
-                v prakso.</p>  
+            <p>Več informacij kot jih zaupaš platformi, boljšo
+                    sliko si bodo podjetja ustvarila o tebi, kar ti
+                    poveča verjetnost povabil na razgovore.</p>  
             </div>
             </div>
         </div>

@@ -512,6 +512,20 @@ input{
     background-color: #7e7e7e;
 }
 
-#shrani_spremembe button{
+#shrani_spremembe{
     background-color: rgb(3, 204, 87);
+}
+#shrani_spremembe:hover{
+    background-color: rgb(1, 172, 72);
+}
+
+#nazaj_edit{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+#nazaj_edit:hover{
+    color: rgb(245, 5, 79);
 }

@@ -25,7 +25,6 @@
         
     <div class = "container_myprofile">
         <div class="wrapper_myprofile">
-
         
         <?php
 
@@ -64,7 +63,6 @@
             <a id="izbris_profila" href="delete_profile.php?id=<?php echo $row['usersId'] ?>"><button name='filter'>Izbris profila</button></a>
             </div>
         </div>
-
     </div>
 
 

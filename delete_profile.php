@@ -10,8 +10,7 @@ if(isset($_GET['id'])){
          if (!$result){
              die("Query failed!");
          }else 
-         
-         header("location: index.php");
+         header("location: includes/logout.inc.php");
 
       }
 
