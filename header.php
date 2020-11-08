@@ -45,11 +45,7 @@
                         echo "<li><a href='#nabor_podjetij'>Nabor podjetij</a></li>";
                         echo "<li><a class='cta' href='login.php'><button>Prijava</button></a></li>";
                     }
-                    // if(isset($_GET['id'])){
-                    //     echo "<li><a href='#o_nas'>O nas</a></li>";
-                    //     echo "<li><a href='#nabor_podjetij'>Nabor podjetij</a></li>";
-                    //     echo "<li><a class='cta' href='login.php'><button>Prijava</button></a></li>";
-                    // }
+
                 ?>
             </ul>
         </nav>

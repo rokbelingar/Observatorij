@@ -27,30 +27,33 @@
 
                 if (isset($_POST['submit-search'])){
                     $search = mysqli_real_escape_string($conn, $_POST['search']);
-                    $sql = "SELECT usersName, usersEmail, hometown, age, from_date, to_date FROM users WHERE usersName LIKE '%$search%' OR usersEmail LIKE '%$search%'";
+                    $sql = "SELECT usersName, usersEmail,  hometown, age, fakulteta, ocena, zanima_me, from_date, to_date FROM users WHERE usersName LIKE '%$search%' OR usersEmail LIKE '%$search%'";
                     $result = mysqli_query($conn, $sql);
                     $queryResult = mysqli_num_rows($result);
 
                     if ($queryResult > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo '<a href="#">
-                    <div class="thecard">
-                    <div class = "thefront">
-                    <h3>'.$row["usersName"].'</h3>
-                    <p>'.$row["hometown"].'</p>
-                    <p>Od: '.$row["from_date"].'</p>
-                    <p>Do: '.$row["to_date"].'</p>
-                    </div>
-                    <div class="theback">
-                    <h3>'.$row["usersName"].'</h3>
-                    <p>'.$row["hometown"].'</p>
-                    <p>Email: '.$row["usersEmail"].'</p>
-                    <p>Starost: '.$row["age"].' Let</p>
-                    <p>Od: '.$row["from_date"].'</p>
-                    <p>Do: '.$row["to_date"].'</p>
-                    </div>
-                    </div>
-                    </a>';
+                            <div class="thecard">
+                            <div class = "thefront">
+                            <h3>'.$row["usersName"].'</h3>
+                            <p>'.$row["fakulteta"].'</p>
+                            <p>Od: '.$row["from_date"].'</p>
+                            <p>Do: '.$row["to_date"].'</p>
+                            </div>
+                            <div class="theback">
+                            <h3>'.$row["usersName"].'</h3>
+                            <p>'.$row["hometown"].'</p>
+                            <p>Email: '.$row["usersEmail"].'</p>
+                            <p>Starost: '.$row["age"].' Let</p>
+                            <p>Izobrazba: '.$row["fakulteta"].'</p>
+                            <p>Povprečje: '.$row["ocena"].'</p>
+                            <p>Zanima me: '.$row["zanima_me"].'</p>
+                            <p>Od: '.$row["from_date"].'</p>
+                            <p>Do: '.$row["to_date"].'</p>
+                            </div>
+                            </div>
+                            </a>';
                         }
                     } else{
                         echo "Ni zadetkov...";      

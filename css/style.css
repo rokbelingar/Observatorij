@@ -529,3 +529,14 @@ input{
 #nazaj_edit:hover{
     color: rgb(245, 5, 79);
 }
+#nav_links{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+#nav_links li{
+    padding: 10px;
+    list-style: none;
+}

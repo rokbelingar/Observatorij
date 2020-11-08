@@ -10,7 +10,7 @@
         <input type="text" name="email" placeholder="Email...">
         <input type="password" name="pwd" placeholder="Geslo...">
         <input type="password" name="pwdrepeat" placeholder="Ponovi geslo...">
-        <button type="submit" name="submit">Nadaljuj</button>
+        <button type="submit" name="submit" href="login.php">Nadaljuj</button>
     </form>
     <?php
     if(isset($_GET["error"])){
@@ -41,7 +41,7 @@
         <div class="nav_links">
                     <div id="registracija_link">
                         <li>
-                           <p>Že imate profil?  <a href="login.php"> Prijava</a></p>
+                           <p>Že imate profil?  <a href="login_company.php"> Prijava</a></p>
                         </li>
                     </div>
                 </div>

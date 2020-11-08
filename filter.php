@@ -31,7 +31,9 @@ include_once 'includes/dbh.inc.php';
 if(isset($_POST['filter'])){
 $hometown = $_POST["hometown"];
 $age = $_POST["age"];
+$fakulteta = $_POST["fakulteta"];
 $ocena = $_POST["ocena"];
+$zanima_me = $_POST["zanima_me"];
 $from_date = $_POST["from_date"];
 $fdate = strtotime($from_date);
 $fdate = date("Y/m/d", $fdate);
@@ -40,31 +42,33 @@ $to_date = $_POST["to_date"];
 $tdate = strtotime($to_date);
 $tdate = date("Y/m/d", $tdate);
 
-if($hometown != "" || $age != "" || $fdate != "" || $tdate !=""){
-    $sql = "SELECT usersName, usersEmail, hometown, age, ocena, from_date, to_date FROM users WHERE hometown = '$hometown' OR age = '$age' OR ocena = '$ocena' OR from_date <= '$fdate' AND to_date >= '$tdate'";
+if($hometown != "" || $age != "" || $fakulteta != "" || $ocena != "" || $zanima_me != "" || $fdate != "" || $tdate !=""){
+    $sql = "SELECT * FROM users WHERE hometown = '$hometown' OR age = '$age' OR fakulteta = '$fakulteta' OR ocena = '$ocena' OR zanima_me = '$zanima_me' OR from_date <= '$fdate' AND to_date >= '$tdate'";
     $result = mysqli_query($conn, $sql) or die('error');
 
     if(mysqli_num_rows($result) > 0){
         while ($row = mysqli_fetch_assoc($result)) {
             echo '<a href="#">
-                <div class="thecard">
-                <div class = "thefront">
-                <h3>'.$row["usersName"].'</h3>
-                <p>'.$row["hometown"].'</p>
-                <p>Od: '.$row["from_date"].'</p>
-                <p>Do: '.$row["to_date"].'</p>
-                </div>
-                <div class="theback">
-                <h3>'.$row["usersName"].'</h3>
-                <p>'.$row["hometown"].'</p>
-                <p>Email: '.$row["usersEmail"].'</p>
-                <p>Starost: '.$row["age"].' Let</p>
-                <p>Povprečje: '.$row["ocena"].'</p>
-                <p>Od: '.$row["from_date"].'</p>
-                <p>Do: '.$row["to_date"].'</p>
-                </div>
-                </div>
-                </a>';
+            <div class="thecard">
+            <div class = "thefront">
+            <h3>'.$row["usersName"].'</h3>
+            <p>'.$row["fakulteta"].'</p>
+            <p>Od: '.$row["from_date"].'</p>
+            <p>Do: '.$row["to_date"].'</p>
+            </div>
+            <div class="theback">
+            <h3>'.$row["usersName"].'</h3>
+            <p>'.$row["hometown"].'</p>
+            <p>Email: '.$row["usersEmail"].'</p>
+            <p>Starost: '.$row["age"].'</p>
+            <p>Izobrazba: '.$row["fakulteta"].' Let</p>
+            <p>Povprečje: '.$row["ocena"].'</p>
+            <p>Zanima me: '.$row["zanima_me"].'</p>
+            <p>Od: '.$row["from_date"].'</p>
+            <p>Do: '.$row["to_date"].'</p>
+            </div>
+            </div>
+            </a>';
     } 
     }else{
         echo "Ni zadetkov...";      

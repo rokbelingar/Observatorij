@@ -16,7 +16,9 @@
         $email = $record["usersEmail"];
         $hometown = $record["hometown"];
         $age = $record["age"];
+        $fakulteta = $record["fakulteta"];
         $ocena = $record["ocena"];
+        $zanima_me = $record["zanima_me"];
         $fdate = $record["from_date"];
         $tdate = $record["to_date"];
     }
@@ -53,7 +55,9 @@
         <p>Kraj: '.$row["hometown"].'</p>
         <p>Email: '.$row["usersEmail"].'</p> 
         <p>Starost: '.$row["age"].' Let</p><br>
+        <p>Izobrazba: '.$row["fakulteta"].'</p><br>
         <p>Povprečje: '.$row["ocena"].'</p>
+        <p>Zanima me: '.$row["zanima_me"].'</p>
         <p>Na voljo za delo od: '.$row["from_date"].' do: '.$row["to_date"].'</p>
         </div>';
 

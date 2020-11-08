@@ -1,8 +1,8 @@
 <?php
 
-function emptyInputSignup($name, $email, $hometown, $age, $ocena, $pwd, $pwdRepeat) {
+function emptyInputSignup($name, $email, $hometown, $age, $fakulteta, $ocena, $zanima_me, $pwd, $pwdRepeat) {
     $result;
-    if (empty($name) || empty($email) || empty($hometown) || empty($age) || empty($ocena)|| empty($pwd) || empty($pwdRepeat)) {
+    if (empty($name) || empty($email) || empty($hometown) || empty($age) || empty($fakulteta) || empty($ocena) || empty($zanima_me) || empty($pwd) || empty($pwdRepeat)) {
         $result = true;
     }
     else{
@@ -60,8 +60,8 @@ function  uidExists($conn, $name, $email){
     mysqli_stmt_close($stmt);
 }
 
-function  createUser($conn, $name, $email, $hometown, $age, $ocena, $from_date, $to_date, $pwd) {
-    $sql = "INSERT INTO users (usersName, usersEmail, hometown, age, ocena, from_date, to_date, usersPwd) VALUES(?, ?, ?, ?, ?, ?, ?, ?);";
+function  createUser($conn, $name, $email, $hometown, $age, $fakulteta, $ocena, $zanima_me, $from_date, $to_date, $pwd) {
+    $sql = "INSERT INTO users (usersName, usersEmail, hometown, age, fakulteta, ocena, zanima_me, from_date, to_date, usersPwd) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)){
         header("location: ../signup.php?error=stmtfailed");
@@ -70,7 +70,7 @@ function  createUser($conn, $name, $email, $hometown, $age, $ocena, $from_date, 
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "sssidsss", $name, $email, $hometown, $age, $ocena, $from_date, $to_date, $hashedPwd);
+    mysqli_stmt_bind_param($stmt, "sssisdssss", $name, $email, $hometown, $age, $fakulteta, $ocena, $zanima_me, $from_date, $to_date, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../login.php");
