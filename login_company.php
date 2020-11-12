@@ -8,7 +8,7 @@
         <form action="includes/login_company.inc.php" method="post">
             <input type="text" name="uid" placeholder="Ime podjetja...">
             <input type="password" name="pwd" placeholder="Geslo...">
-            <button type="submit" name="submit">Prijava!</button>
+            <button type="submit" name="prijava">Prijava!</button>
         </form>
             <?php
         if(isset($_GET["error"])){

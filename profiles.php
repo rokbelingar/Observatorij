@@ -1,5 +1,10 @@
 <?php
+
+    if(isset($_POST["prijava"])){
+    include_once 'header_company.php';
+    }else{
     include_once 'header.php';
+    }
 ?>
 
 <!DOCTYPE html>
