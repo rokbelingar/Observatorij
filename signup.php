@@ -12,16 +12,27 @@
     <div id="form">
     <h2>Registracija:</h2>
     <form action="includes/signup.inc.php" method="post">
+        <label for="name">Ime in priimek:</label>
         <input type="text" name="name" placeholder="Ime in priimek...">
+        <label for="email">Email:</label>
         <input type="text" name="email" placeholder="Email...">
+        <label for="hometown">Mesto:</label>
         <input type="text" name="hometown" placeholder="Mesto...">
+        <label for="age">Starost:</label>
         <input type="number" name="age" placeholder="Starost..." min = "16" max= "65">
+        <label for="fakulteta">Fakulteta:</label>
         <input type="text" name="fakulteta" placeholder="Fakulteta/šola/zavod...">
+        <label for="ocena">Povprečna ocena:</label>
         <input type="number" name="ocena" placeholder="Povprečna ocena..." min = "6" max= "10" step=".01">
+        <label for="zanima_me">Zanima me:</label>
         <input type="text" name="zanima_me" placeholder="Zanima me...">
+        <label for="from_date">Datum pričetka dela:</label>
         <input type="date" name="from_date" placeholder="Datum začetka..." id="from_date" min="<?php echo date("Y-m-d"); ?>">
+        <label for="to_date">Datum zaključka dela:</label>
         <input type="date" name="to_date" placeholder="datum zaključka..." id="to_date">
+        <label for="pwd">Geslo:</label>
         <input type="password" name="pwd" placeholder="Geslo...">
+        <label for="pwdrepeat">Ponovi geslo:</label>
         <input type="password" name="pwdrepeat" placeholder="Ponovi geslo...">
         <button type="submit" name="submit" href="login.php">Nadaljuj</button>
     </form>

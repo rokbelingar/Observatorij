@@ -6,7 +6,9 @@
         <div id="form">
         <h2>Prijava:</h2>
         <form action="includes/login.inc.php" method="post">
+            <label for="uid">Ime in priimek/Email:</label>
             <input type="text" name="uid" placeholder="Ime/Email...">
+            <label for="pwd">Geslo:</label>
             <input type="password" name="pwd" placeholder="Geslo...">
             <button type="submit" name="submit">Prijava!</button>
         </form>

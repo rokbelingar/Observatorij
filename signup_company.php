@@ -6,9 +6,13 @@
     <div id="form">
     <h2>Registracija:</h2>
     <form action="includes/signup_company.inc.php" method="post">
+        <label for="name">Ime podjetja:</label>
         <input type="text" name="name" placeholder="Ime podjetja...">
+        <label for="email">Email:</label>
         <input type="text" name="email" placeholder="Email...">
+        <label for="pwd">Geslo:</label>
         <input type="password" name="pwd" placeholder="Geslo...">
+        <label for="pwdrepeat">Ponovi geslo:</label>
         <input type="password" name="pwdrepeat" placeholder="Ponovi geslo...">
         <button type="submit" name="submit" href="login.php">Nadaljuj</button>
     </form>

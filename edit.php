@@ -56,14 +56,23 @@
     <div id="form">
     <h2>Uredi:</h2>
     <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
+        <label for="name">Ime in priimek:</label>
         <input type="text" name="name" placeholder="Ime in priimek..." value="<?php echo $name; ?>">
+        <label for="email">Email:</label>
         <input type="text" name="email" placeholder="Email..." value="<?php echo $email; ?>">
+        <label for="hometown">Mesto:</label>
         <input type="text" name="hometown" placeholder="Mesto..." value="<?php echo $hometown; ?>">
+        <label for="age">Starost:</label>
         <input type="number" name="age" placeholder="Starost..." min = "16" max= "65" value="<?php echo $age; ?>">
+        <label for="fakulteta">Fakulteta:</label>
         <input type="text" name="fakulteta" placeholder="Fakulteta/šola/zavod..." value="<?php echo $fakulteta; ?>">
+        <label for="ocena">Povprečna ocena:</label>
         <input type="number" name="ocena" placeholder="Povprečna ocena..." min = "6" max= "10" step=".01" value="<?php echo $ocena; ?>">
+        <label for="zanima_me">Zanima me:</label>
         <input type="text" name="zanima_me" placeholder="Zanima me..." value="<?php echo $zanima_me; ?>">
+        <label for="from_date">Datum pričetka dela:</label>
         <input type="date" name="from_date" placeholder="Datum začetka..." id="from_date" value="<?php echo $fdate; ?>">
+        <label for="to_date">Datum zaključka dela:</label>
         <input type="date" name="to_date" placeholder="datum zaključka..." id="to_date" value="<?php echo $tdate; ?>">
         <button type="submit" name="update" id="shrani_spremembe">Shrani spremembe</button>
 
